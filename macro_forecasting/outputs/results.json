@@ -1,0 +1,62 @@
+{
+  "dataset": "statsmodels macrodata (FRED and BLS)",
+  "sample": {
+    "first": "1959Q4",
+    "last": "2009Q2",
+    "validation": "1985Q1-1994Q3",
+    "test": "1995Q1-2009Q2"
+  },
+  "forecast_horizon": "next-quarter GDP annualized log growth",
+  "availability": "predictors lagged one quarter; training labels have at least one-quarter publication buffer; revised-vintage caveat",
+  "selected_alpha": 1000.0,
+  "validation_rmse_by_alpha": {
+    "0.1": 2.3558901284756795,
+    "1.0": 2.3467699860838707,
+    "10.0": 2.2734689293549493,
+    "100.0": 2.0269704660147947,
+    "1000.0": 2.0045543023691383
+  },
+  "test_metrics": {
+    "ridge": {
+      "n": 58,
+      "rmse": 2.75117802045118,
+      "mae": 1.9093104080416075,
+      "bias": 0.9213840522417003
+    },
+    "mean": {
+      "n": 58,
+      "rmse": 2.772180514034354,
+      "mae": 1.9005181791199997,
+      "bias": 0.8204321498406737
+    },
+    "persistence": {
+      "n": 58,
+      "rmse": 2.883350064658844,
+      "mae": 2.1919241545855326,
+      "bias": 0.05851087973075592
+    }
+  },
+  "ridge_vs_mean_squared_loss_hac_tstat": -0.6327282821568574,
+  "ridge_vs_mean_squared_loss_hac_p_approx": 0.5269110975000668,
+  "test_2007_onward": {
+    "ridge": {
+      "n": 11,
+      "rmse": 4.698800903710749,
+      "mae": 3.411751287410196,
+      "bias": 3.3327427816085606
+    },
+    "mean": {
+      "n": 11,
+      "rmse": 4.7683499656663,
+      "mae": 3.4852070414647325,
+      "bias": 3.4386709438290834
+    },
+    "persistence": {
+      "n": 11,
+      "rmse": 4.3212092287461354,
+      "mae": 3.33769387494779,
+      "bias": 0.09227386732833603
+    }
+  },
+  "no_live_trading_claim": true
+}
